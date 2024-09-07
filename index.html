@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Tiago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Introdução -->
+    <section id="intro" class="hero">
+        <h1 id="meu-nome" class="animate__animated">Olá, eu sou o Tiago</h1>
+    </section>
+    
+    <!-- Menu de navegação  -->
+    <header>
+        <nav>
+            <div id="nav-container">
+                <ul id="nav-list">
+                    <li class="nav-item" data-section="sobre"><a href="#"><i class="fas fa-user"></i> Sobre Mim</a></li>
+                    <li class="nav-item" data-section="formacao"><a href="#"><i class="fas fa-graduation-cap"></i> Formação</a></li>
+                    <li class="nav-item" data-section="projetos"><a href="#"><i class="fas fa-code"></i> Projetos</a></li>
+                    <li class="nav-item" data-section="contato"><a href="#"><i class="fas fa-envelope"></i> Contato</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Seções que aparecem ao clicar -->
+    <section id="sobre" class="content-section animate__animated">
+        <h2>Sobre Mim</h2>
+        <p>Adicionar breve descrição sobre mim e minhas motivações</p>
+    </section>
+
+    <section id="formacao" class="content-section animate__animated">
+        <h2>Formação e Cursos</h2>
+        <p>Listar formação e cursos</p>
+    </section>
+
+    <section id="projetos" class="content-section animate__animated">
+        <h2>Projetos</h2>
+        <p>Listar projetos</p>
+    </section>
+
+    <section id="contato" class="content-section animate__animated">
+        <h2>Contato</h2>
+        <p>Formas de entrar em contato</p>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Função para animar fade in/fade out do nome e a descida do menu
+        window.onload = function () {
+            const nome = document.getElementById('meu-nome');
+            const introSection = document.getElementById('intro');
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.content-section');
+
+            //1. Fazer o nome aparecer e depois desaparecer
+            nome.classList.add('animate__fadeIn');
+            setTimeout(() => {
+                nome.classList.remove('animate__fadeIn');
+                nome.classList.add('animate__fadeOut');
+            }, 3000); // Aparece por 3 segundos
+
+            //2. Fazer o menu descer após o fade out do nome
+            setTimeout(() => {
+                introSection.style.display = 'none';
+                navItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.visibility = 'visible';
+                        item.classList.add('animate__fadeInDown');
+                    }, index * 500); // Efeito de cascata com delay de 0,5 entre cada item
+                });
+            }, 4500); // Aparece 1,5 segundos depois do fade out
+
+            //3. Mostrar ou esconder o conteúdo ao clicar nos itens
+            navItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const targetSection = item.getAttribute('data-section');
+                    const section = document.getElementById(targetSection);
+                    
+                    if (section.style.display === 'block') {
+                        section.classList.remove('animate__fadeInLeft');
+                        section.classList.add('animate__fadeOutRight'); // Animação para desaparecer da direita para a esquerda
+                        setTimeout(() => {
+                            section.style.display = 'none'; // Esconde a seção após a animação de saída
+                        }, 1000); // Tempo para permitir a animação de saída
+                    } else {
+                        sections.forEach(sec => {
+                            sec.style.display = 'none'; // Esconde todas as outras seções
+                            sec.classList.remove('animate__fadeInLeft', 'animate__fadeOutRight'); // Remove as animações anteriores
+                        });
+                        section.style.display = 'block';
+                        section.classList.add('animate__fadeInLeft'); // Animação para aparecer da esquerda para a direita
+                    }
+                });
+            });
+        }
+    </script>
+</body>
+</html>

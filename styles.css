@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SUSE', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background: linear-gradient(45deg, #185383, #7900f1, #06b1c7, #f7b731);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    border-radius: 12px;
+}
+
+header {
+    text-align: center;
+    visibility: hidden; /* Menu começa invisível */
+}
+
+#nav-container {
+    background-color: #fff; /* caixa de lista */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* Centraliza a caixa em relação ao conteúdo */
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li {
+    visibility: hidden; /* Itens da lista invisíveis até a animação */
+    margin: 15px 0;
+    width: 200px; /* Botões da mesma largura */
+    padding: 10px;
+    background-color: #ffffff; /* Cor de fundo dos itens da lista */
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+/* Quando o mouse passar por cima do item a cor de fundo muda */
+header ul li:hover {
+    background-color: #555;
+}
+
+header ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    line-height: 1.6;
+}
+
+header ul li i {
+    margin-right: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+#nav-list {
+    visibility: hidden; /* Esconde o menu até a animação */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Esconde todas as seções inicialmente */
+.content-section {
+    display: none;
+}
+
+/* Animação personalizada para fadeInDown */
+.animate__fadeInDown {
+    animation: fadeInDown 1s ease-in-out forwards;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animações para abrir e fechar as seções */
+.animate__fadeInLeft {
+    animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animate__fadeOutRight {
+    animation: fadeOutRight 1s ease forwards;
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
