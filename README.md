@@ -31,3 +31,12 @@ Este portfólio pessoal foi criado para apresentar informações sobre mim, minh
 2. **Navegue para o Diretório do projeto:**
    ```bash
    cd seu-repositorio
+
+**Licença** 
+------- Este projeto está licenciado sob a Licença MIT. * * * 
+
+Obrigado por visitar meu portfólio! Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato. vbnet Copiar código 
+`Se precisar de mais alguma alteração ou adicionar mais detalhes, é só me avisar!`
+
+
+
