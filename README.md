@@ -32,7 +32,7 @@ Este portfólio pessoal foi criado para apresentar informações sobre mim, minh
    ```bash
    cd seu-repositorio
 
-**Licença** 
+## Licença 
 ------- Este projeto está licenciado sob a Licença MIT. * * * 
 
 Obrigado por visitar meu portfólio! Se tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato. vbnet Copiar código 
