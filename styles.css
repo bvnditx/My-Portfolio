@@ -80,7 +80,7 @@ header ul li {
 
 /* Quando o mouse passar por cima do item a cor de fundo muda */
 header ul li:hover {
-    background-color: #555;
+    background-color: #27ba19;
 }
 
 header ul li a {
@@ -268,4 +268,30 @@ header ul li i {
 /* Adiciona animação de fadeOut */
 .fade-out {
     animation: fadeOut 1s forwards;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 40px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #27ba19; /* Altere para a cor que você preferir */
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+    color: #27ba19;
+}
+
+.social-icons a {
+    transition: transform 0.3s ease, color 0.3s ease;
 }
