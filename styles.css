@@ -7,7 +7,7 @@
 body {
     font-family: 'SUSE', sans-serif;
     line-height: 1.6;
-    color: #000000;
+    color: #fff;
     background: linear-gradient(45deg, #185383, #7900f1, #06b1c7, #f7b731);
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
@@ -67,10 +67,15 @@ header ul li {
     padding: 10px;
     background-color: #ffffff; /* Cor de fundo dos itens da lista */
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.5 ease;
     display: flex;
     align-items: center;
     height: 50px;
+    position: relative;
+}
+
+.nav-item.active {
+    transform: translateY(-20px);
 }
 
 /* Quando o mouse passar por cima do item a cor de fundo muda */
@@ -151,4 +156,116 @@ header ul li i {
         opacity: 0;
         transform: translateX(100%);
     }
+}
+
+
+/* Estilos para a seção de formação */
+#formacao {
+    padding: 20px;
+}
+
+/* Contêiner para os certificados */
+.certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Estilo para cada quadro de certificado */
+.certificate {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 1s forwards;
+    background-color: #fff;
+}
+
+/* Animação de fadeIn e scale para os certificados */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Estilo para a imagem do certificado */
+.certificate img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo para o título do certificado */
+.certificate p {
+    padding: 10px;
+    background-color: #fff;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Animação personalizada para fadeOut */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.modal img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Adiciona animação de fadeOut */
+.fade-out {
+    animation: fadeOut 1s forwards;
 }

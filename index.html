@@ -38,7 +38,7 @@
 
     <section id="formacao" class="content-section animate__animated">
         <h2>Formação e Cursos</h2>
-        <p>Listar formação e cursos</p>
+
     </section>
 
     <section id="projetos" class="content-section animate__animated">
@@ -50,6 +50,14 @@
         <h2>Contato</h2>
         <p>Formas de entrar em contato</p>
     </section>
+
+     <!-- Modal para visualização das imagens -->
+     <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img class="modal-image" src="" alt="Certificado">
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
@@ -91,6 +99,7 @@
                         section.classList.add('animate__fadeOutRight'); // Animação para desaparecer da direita para a esquerda
                         setTimeout(() => {
                             section.style.display = 'none'; // Esconde a seção após a animação de saída
+                            item.classList.remove('active'); // Remove a class após a animação
                         }, 1000); // Tempo para permitir a animação de saída
                     } else {
                         sections.forEach(sec => {
@@ -99,10 +108,13 @@
                         });
                         section.style.display = 'block';
                         section.classList.add('animate__fadeInLeft'); // Animação para aparecer da esquerda para a direita
+                        navItems.forEach(i => i.classList.remove('active'));
+                        item.classList.add('active');
                     }
                 });
             });
         }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
