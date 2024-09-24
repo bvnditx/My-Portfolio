@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const formationSection = document.getElementById('formacao');
     const certificates = [
-        { title: 'Introdução à Gestão de Projetos', imageUrl: 'Introdução à Gestão de Projetos.png' },
-        { title: 'Criando um Projeto com Interface Gráfica Utilizando a Linguagem Python', imageUrl: 'Criando um Projeto com Interface Gráfica Utilizando a Linguagem Python.png' },
-        { title: 'INTRODUÇÃO À PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)', imageUrl: 'INTRODUÇÃO À PROGRAMAÇÃO ORIENTADA A OBJETOS (POO).png' },
-        { title: 'LINGUAGEM DE PROGRAMAÇÃO PYTHON - BÁSICO', imageUrl: 'LINGUAGEM DE PROGRAMAÇÃO PYTHON - BÁSICO.png' },
-        { title: 'Microsoft Excel 2016 - Intermediário', imageUrl: 'Microsoft Excel 2016 - Intermediário.png' },
-        { title: 'Fundamentos de Lógica de Programação', imageUrl: 'Fundamentos de Lógica de Programação.png' },
-        { title: 'HTML e CSS na Prática', imageUrl: 'HTML e CSS na Prática.png' },
-        { title: 'HTML - Avançado', imageUrl: 'HTML - Avançado.png' },
+        {title: 'NLW Pocket:Javascript - Programação Iniciante', imageUrl: 'CERTIFICADOS/NLW PocketJavascript - Programação Iniciante.png'},
+        { title: 'INTERNET DAS COISAS', imageUrl: 'CERTIFICADOS/INTERNET DAS COISAS.png'},
+        { title: 'IMERSÃO DEV COM GOOGLE GEMINI', imageUrl: 'CERTIFICADOS/IMERSÃO DEV COM GOOGLE GEMINI.png' },
+        { title: 'Introdução à Gestão de Projetos', imageUrl: 'CERTIFICADOS/Introdução à Gestão de Projetos.png' },
+        { title: 'Criando um Projeto com Interface Gráfica Utilizando a Linguagem Python', imageUrl: 'CERTIFICADOS/Criando um Projeto com Interface Gráfica Utilizando a Linguagem Python.png' },
+        { title: 'INTRODUÇÃO À PROGRAMAÇÃO ORIENTADA A OBJETOS (POO)', imageUrl: 'CERTIFICADOS/INTRODUÇÃO À PROGRAMAÇÃO ORIENTADA A OBJETOS (POO).png' },
+        { title: 'LINGUAGEM DE PROGRAMAÇÃO PYTHON - BÁSICO', imageUrl: 'CERTIFICADOS/LINGUAGEM DE PROGRAMAÇÃO PYTHON - BÁSICO.png' },
+        { title: 'Microsoft Excel 2016 - Intermediário', imageUrl: 'CERTIFICADOS/Microsoft Excel 2016 - Intermediário.png' },
+        { title: 'Fundamentos de Lógica de Programação', imageUrl: 'CERTIFICADOS/Fundamentos de Lógica de Programação.png' },
+        { title: 'HTML e CSS na Prática', imageUrl: 'CERTIFICADOS/HTML e CSS na Prática.png' },
+        { title: 'HTML - Avançado', imageUrl: 'CERTIFICADOS/HTML - Avançado.png' },
         // Adicione mais certificados aqui
     ];
 

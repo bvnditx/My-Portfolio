@@ -33,41 +33,58 @@
     <!-- Seções que aparecem ao clicar -->
     <section id="sobre" class="content-section animate__animated">
         <h2>Sobre Mim</h2>
-        <p>Adicionar breve descrição sobre mim e minhas motivações</p>
+        <div id="sobre-container">
+            <div id="resumo-container">
+                <p>
+                    Estudante de Engenharia de Software, atualmente no segundo período, buscando uma oportunidade de estágio na área de desenvolvimento. Possuo conhecimento básico em Python e Gestão de Projetos, manutenção de computadores e nível intermediário no Pacote Office.
+                </p>
+                <p>
+                    Experiência anterior como auxiliar de depósito em uma empresa do setor farmacêutico, com habilidades em logística, controle de estoque, faturamento e controle de avarias. Tenho habilidades intermediárias em inglês, tanto para escrita, conversação quanto leitura.
+                </p>
+                <p>
+                    Destaco minha capacidade e vontade de aprender, crescer profissionalmente e aprimorar minhas habilidades no ambiente de trabalho.
+                </p>
+            </div>
+
+            <div id="foto-container">
+                <img src="FOTO.jpg" alt="foto">
+            </div>
+        </div>
     </section>
 
     <section id="formacao" class="content-section animate__animated">
         <h2>Formação e Cursos</h2>
-
     </section>
 
     <section id="projetos" class="content-section animate__animated">
         <h2>Projetos</h2>
-        <p>Listar projetos</p>
+        <div class="projetos-container"></div>
     </section>
 
     <section id="contato" class="content-section animate__animated">
         <h2>Contatos</h2>
         <div class="social-icons">
-            <a href="https://github.com/bvnditx" target="_blank">
+            <a href="https://github.com/tiago4lex" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/tiago-4lexandre/" target="_blank">
+            <a href="https://www.linkedin.com/in/tiago-alexandre2001/" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
         </div>
     </section>
-    
 
-     <!-- Modal para visualização das imagens -->
-     <div id="myModal" class="modal">
+    <!-- Modal para visualização das imagens -->
+    <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <img class="modal-image" src="" alt="Certificado">
         </div>
     </div>
-
+    
+    <!-- Scripts de animação e carregamento dos projetos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="projetos.js"></script>
+    <script src="script.js"></script>
     <script>
         AOS.init();
 
@@ -121,8 +138,7 @@
                     }
                 });
             });
-        }
+        };
     </script>
-    <script src="script.js"></script>
 </body>
 </html>

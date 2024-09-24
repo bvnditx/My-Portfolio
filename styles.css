@@ -8,8 +8,8 @@ body {
     font-family: 'SUSE', sans-serif;
     line-height: 1.6;
     color: #fff;
-    background: linear-gradient(45deg, #185383, #7900f1, #06b1c7, #f7b731);
-    background-size: 400% 400%;
+    background: linear-gradient(45deg, #4d4d4d, #000000, #5155cf, #4400ff);
+    background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
     display: flex;
     justify-content: center;
@@ -80,7 +80,7 @@ header ul li {
 
 /* Quando o mouse passar por cima do item a cor de fundo muda */
 header ul li:hover {
-    background-color: #27ba19;
+    background-color: #0080ff;
 }
 
 header ul li a {
@@ -249,8 +249,8 @@ header ul li i {
 }
 
 .modal img {
-    max-width: 100%;
-    max-height: 100%;
+    width: auto;
+    height: 800px;
     display: block;
     margin: 0 auto;
     border-radius: 10px;
@@ -284,14 +284,140 @@ header ul li i {
 }
 
 .social-icons a:hover {
-    color: #27ba19; /* Altere para a cor que você preferir */
-}
-
-.social-icons a:hover {
     transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
-    color: #27ba19;
+    color: #0080ff;
 }
 
 .social-icons a {
     transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#sobre-container { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 60%;
+}
+
+#foto-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#foto-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #185383;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #sobre-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #resumo-conteiner, #foto-container {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .projeto-container {
+        flex-direction: column;
+    }
+
+    .projeto-info, .projeto-imagem {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+#resumo-conteiner {
+    flex: 2;
+    max-width: 50%;
+    margin-right: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.projeto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.projeto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projeto-info {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.projeto-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.projeto-info p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.projeto-links a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #185383;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.projeto-links a.github-link:hover {
+    background-color: #555;
+}
+
+.projeto-links a.demo-link:hover {
+    background-color: #0b6fc2;
+}
+
+.projeto-imagem {
+    flex: 1;
+}
+
+.projeto-imagem img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.pdf-link {
+    display: inline-block;
+    margin-left: 10px;
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.pdf-link i {
+    margin-right: 5px;
+}
+
+.pdf-link:hover {
+    color: #c9302c;
 }
